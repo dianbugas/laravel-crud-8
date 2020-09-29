@@ -1,20 +1,21 @@
 <?php
 
+use App\Contact;
 namespace Database\Seeders;
 
 use App\Models\Contact;
+use Carbon\Factory;
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class ContactsTabelSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-        $this->call(ContactTabelSeeder::class);
+        factory(Contact::class, 10)->create();
     }
 }
